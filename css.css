@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  /* Date Section */
+  #date-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  #date-title {
+    font-size: 1rem;
+    font-weight:400;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  /* Waste Container */
+  #waste-container {
+    display: flex;
+    width: 100%;
+  flex-grow: 4;
+  }
+  
+  .waste-block {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all 0.1s ease;
+    border: 1px solid black;
+    gap:0.5rem;
+  }
+  
+  .waste-block>div {
+    font-size:4rem;
+  }
+  
+  @media (max-width: 768px) { /* Target mobile devices */
+    #waste-container {
+      flex-direction: column; /* Stack children vertically */
+    }
+  }
+  
+  .waste-block.full {
+    flex: 1;
+  }
+  
+  .waste-block.half {
+    flex: 0.5;
+  }
+  
+  #waste-block-2 {
+  }
+  
+  /* Button Container */
+  #button-container {
+    margin-top: 20px;
+  }
+  
+  button {
+    font-family: Tahoma, sans-serif;
+    font-weight:500;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  
+  #toggle-button:hover {
+    background-color: #555;
+  }
+  
+  /* Background Colors */
+  .bg-grey { background-color: #54656F; }
+  .bg-green { background-color: #18B26A; }
+  .bg-blue { background-color: #0089D1; }
+  .bg-brown { background-color: #985D35; }
+  .bg-red { background-color: #EE3F22; }
+  .bg-yellow { background-color: #FD8812; }
+  .bg-teal { background-color: #00A9A4; }
+  .bg-pink { background-color: #ED008C}
+  
