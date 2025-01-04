@@ -25,8 +25,31 @@
         <button id="next-week">&rsaquo;</button>
   </div>
 
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js.js"></script>
+  <div id="error-modal" class="modal">
+    <div class="modal-content">
+      <!-- Step 1: Enter Postcode -->
+      <div id="step-1">
+        <h2>Enter Postcode</h2>
+        <p id="postcode-error" class="error"></p>
+        <input type="text" id="postcode-input" placeholder="Enter postcode">
+        <button id="fetch-addresses">Find address</button>
+        
+      </div>
+  
+      <!-- Step 2: Select Address -->
+      <div id="step-2" style="display: none;">
+        <h2>Select Address</h2>
+        <form id="address-selection"></form>
+        <button id="apply-address">Apply</button>
+      </div>
+  
+      <button id="cancel-modal">Cancel</button>
+    </div>
+  </div>
+  
+  <!-- Edit Address Button -->
+  <button id="edit-address"> Edit Address</button>
+  <script src="binSchedule.js"></script>
+  <script src="api.js"></script>
 </body>
 </html>
