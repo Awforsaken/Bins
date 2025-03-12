@@ -19,11 +19,16 @@
   <div id="date-section">
     <h1 id="date-title">Loading...</h1>
       <!-- Next/Previous Button -->
-  <div id="button-container">
+  <div id="button-container" class="buttons">
             <button id="prev-week">&lsaquo;</button>
     <button id="current">Upcoming</button>
         <button id="next-week">&rsaquo;</button>
   </div>
+  <div class="buttons">
+    <button id="edit-address" class="link">Change Address</button>
+    <button id="about" class="link">About</button>
+  </div>
+
 
   <div id="error-modal" class="modal">
     <div class="modal-content">
@@ -42,14 +47,37 @@
         <form id="address-selection"></form>
         <button id="apply-address" class="primary">Apply</button>
       </div>
-  
-      <button id="cancel-modal">Cancel</button>
+    
+      <button id="cancel-modal" class="cancel-button">Close</button>
+    </div>
+
+
+  </div>
+  <div id="about-modal" class="modal">
+    <div class="about-container modal-content" >
+      <h2>About</h2>
+
+      <p>This web application connects to the Bury Council bin collection service to provide you with up-to-date information about your upcoming bin collections.</p>
+      
+      <p>Simply enter your postcode to see which bins will be collected next and when, helping you stay organized and never miss a collection day.</p>
+      
+      <p>Created by <a class="link" href="https://danielius.vercel.app">Dan</a></p>
+      <br>
+      <h2>Privacy & Data</h2>
+      
+      <p>This app doesn't collect or store any of your data other than temporarily sending it to Bury Council to retrieve collection dates. This returns a short code in the website URL after you enter your address, allowing you to bookmark the page for easy future access without any personal data being stored anywhere. (In reality, this app is pretty minimal and doesn't store anything - it just checks the URL).</p>
+      
+      <p>Additionally, I have privacy-first Simple Analytics running on this website to identify which devices it is used on for possible future optimizations.</p>
+      <br>
+      <button id="close-about" class="cancel-button">Close</button>
     </div>
   </div>
-  
-  <!-- Edit Address Button -->
-  <button id="edit-address"> Edit Address</button>
+
   <script src="binSchedule.js"></script>
   <script src="api.js"></script>
+  <script src="about.js"></script>
+  <!-- 100% privacy-first analytics -->
+<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
 </body>
 </html>
